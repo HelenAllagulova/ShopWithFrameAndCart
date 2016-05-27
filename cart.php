@@ -16,6 +16,27 @@
 <table>
 
 <?php
+//рекурсивная функция
+//Из массива REQUEST переписываем данные в одноименные строки, проверка по отметке на чекбоксе.
+//Счетчик считает сколько товаров выбрано
+function ReArray($arr,$i)
+{
+    global $name;
+    global $cost;
+    global $action;
+    $sch = 0;
+    if (isset($arr['vibor'][$i])) {
+        $name[$i] = $arr['name'][$i];
+        $cost[$i] = $arr['cost'][$i];
+        $action[$i] = $arr['action'][$i];
+        $sch=1;
+    }
+    if($i==0){return $sch;}
+    else{
+        return $sch+=ReArray($arr,--$i);
+    }
+}
+
     $summa = 0;
     $textTable = '';
 
@@ -96,19 +117,9 @@ while( $i < count($products) );
 $name=array();
 $cost=array();
 $action=array();
-$chetchik=0;
 
-//Из массива REQUEST переписываем данные в одноименные строки, проверка по отметке на чекбоксе.
-//Счетчик считает сколько товаров выбрано 
-for($i=0;$i<4;$i++){
-    if(isset($_REQUEST['vibor'][$i])){
-        $name[$i]=$_REQUEST['name'][$i];
-        $cost[$i]=$_REQUEST['cost'][$i];
-        $action[$i]=$_REQUEST['action'][$i];
-        $chetchik++;
-    }
-    
-}
+// вызов рекурсивной функции
+$chetchik=ReArray($_REQUEST,count($_REQUEST)-1);
 
 // Сортировка по возрастанию цены
 array_multisort($cost,$name,$action);
