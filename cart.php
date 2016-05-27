@@ -100,11 +100,11 @@ $chetchik=0;
 
 //Из массива REQUEST переписываем данные в одноименные строки, проверка по отметке на чекбоксе.
 //Счетчик считает сколько товаров выбрано 
-for($i=1;$i<=4;$i++){
-    if(isset($_REQUEST['vibor'.$i])){
-        $name[$i]=$_REQUEST['name'.$i];
-        $cost[$i]=$_REQUEST['cost'.$i];
-        $action[$i]=$_REQUEST['action'.$i];
+for($i=0;$i<4;$i++){
+    if(isset($_REQUEST['vibor'][$i])){
+        $name[$i]=$_REQUEST['name'][$i];
+        $cost[$i]=$_REQUEST['cost'][$i];
+        $action[$i]=$_REQUEST['action'][$i];
         $chetchik++;
     }
     
