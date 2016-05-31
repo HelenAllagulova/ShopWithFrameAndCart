@@ -27,10 +27,11 @@ function ReArray($arr,$i)
     global $action;
     global $count;
     $sch = 0;
-    if (isset($arr['vibor'][$i])) {
-        $name[$i] = $arr['name'][$i];
-        $cost[$i] = $arr['cost'][$i];
-        $action[$i] = $arr['action'][$i];
+    if (isset($arr['vibor'][$i]))
+    {
+        $name[] = $arr['name'][$i];
+        $cost[] = $arr['cost'][$i];
+        $action[] = $arr['action'][$i];
         $count[]=$arr['count'][$i];
         $sch=1;
     }
