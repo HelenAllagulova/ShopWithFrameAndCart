@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <title> Интернет-магазин "Рога и Копыта"
+ </title>
+     <link href="../styles/style.css" rel="stylesheet">
+     <meta charset="utf-8">
+ </head>
+ <body>
+
+   <main>
+    <section>
+        <div>
+           <a href="Cart_Entrance.html" target="_blank">
+               <img src="http://royaltoys.in.ua/royal_storage/goods/db9142c545ffa17aa34dddf963bb4977.jpeg" />
+           </a>
+        </div>
+        <div onclick="alert(this.title)" title="Товар в дороге, ожидается в пн">
+            <img src="https://rachaelshah.files.wordpress.com/2015/08/applewatch.jpeg?w=1368" width="24%" />
+
+        </div>
+        <div onclick="alert(this.title)" title="Товар под заказ - звоните позже!">
+            <img src="http://hi-news.ru/wp-content/uploads/2016/01/redmi-3.jpg" width="24%" />
+        </div>
+        <div onmouseout="alert(this.title)" title="Купи меня сегодня со скидкой 25%!!!">
+            <img src="http://hotline.ua/img/tx/720/72066283.jpg" width="24%" />
+        </div>
+
+    </section>
+
+       <div style="clear: both"></div>
+       <section>
+           <div>
+               <p>Ya sea un cumpleaños, comunión o una simple fiesta infantil, los Angry Birds son un acierto seguro.
+                   Aquí tenéis ideas que podéis hacer vosotros mismos en casa sin gastaros apenas dinero:
+               </p>
+           </div>
+           <div>
+               <p> Я пианист. На концерте на мои руки смотрит весь зал. С тех пор как купил часы, в зале аншлаг. Задумываюсь о покупке экземпляра и на вторую руку.</p>
+           </div>
+           <div>
+               <p>
+                   AlexN12д
+                   Уважаемые Преподаватели, Администрация!
+                   Лекция, описанная в теме скорее всего и подготовлена и прочитана хорошо, вот только понять что-либо просто невозможно. Набор булькающих звуков.
+                   Сделайте пожалуйста звук нормальный на лекциях - кровь из ушей идё
+               </p>
+           </div>
+           <div>
+               <p>Dell U2414H - это долгожданное обновление линейки UltraSharp от Dell. Сохранив фамильные черты дизайне, монитор,
+                   благодаря самой тонкой в мире рамке (6,05 мм), теперь может стать не просто устройством вывода изображения,
+                   но и украшением рабочего места.
+               </p>
+           </div>
+       </section>
+       <section>
+            <form method="post" action="../scripts/cart.php">
+                <div>
+               <label>Товар:  "child_car" </label>
+               <input type="text" name="name[]" hidden value="child_car"><br><br>
+               <label> Цена: 5000uah </label>
+               <input type="text" name="cost[]" hidden value="5000"><br><br>
+               <label>Скидка: 90% </label>
+               <input type="text" name="action[]" hidden value="90"><br><br>
+               <label>Выберете количество,(шт): </label>
+               <input type="number" min="1" max="10" step="1" value="1" name="count[]"><br><br>
+               <label>Добавить</label>
+               <input type="checkbox" name="vibor[0]" > <br><br>
+                </div>
+
+                <div>
+               <label>Товар: "clock" </label>
+               <input type="text" name="name[]" hidden value="clock"><br><br>
+               <label> Цена: 4000uah </label>
+               <input type="text" name="cost[]" hidden value="4000"><br><br>
+               <label>Скидка: 10%</label>
+               <input type="text" name="action[]" hidden value="10"><br><br>
+               <label>Выберете количество,(шт): </label>
+               <input type="number" min="1" max="10" step="1" value="1" name="count[]"><br><br>
+               <label>Добавить</label>
+               <input type="checkbox" name="vibor[1]" >
+                </div>
+                <div>
+               <label>Товар: "phone"</label>
+               <input type="text" name="name[]" hidden value="phone"><br><br>
+               <label> Цена: 40000uah </label>
+               <input type="text" name="cost[]" hidden value="40000"><br><br>
+               <label>Скидка: 20%</label>
+               <input type="text" name="action[]" hidden value="20"><br><br>
+               <label>Выберете количество,(шт): </label>
+               <input type="number" min="1" max="10" step="1" value="1" name="count[]"><br><br>
+               <label>Добавить</label>
+               <input type="checkbox" name="vibor[2]" >
+                </div>
+                <div>
+               <label>Товар: "tv" </label>
+               <input type="text" name="name[]" hidden value="tv"><br><br>
+               <label> Цена: 15000uah </label>
+               <input type="text" name="cost[]" hidden value="15000"><br><br>
+               <label>Скидка: 5%</label>
+               <input type="text" name="action[]" hidden value="5"><br><br>
+               <label>Выберете количество,(шт): </label>
+               <input type="number" min="1" max="10" step="1" value="1" name="count[]"><br><br>
+               <label>Добавить</label>
+               <input type="checkbox" name="vibor[3]"><br><br>
+                </div>
+                <input type="submit" value="Добавить все выбранные товары в корзину">
+       </form>
+       </section>
+   </main>
+
+ </body>
+</html>
