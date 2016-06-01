@@ -68,3 +68,14 @@ label{
     text-align: left;
 
 }
+form{
+    width: 98%;
+    border: #d4d4d4;
+}
+textarea{
+    width: 98%;
+    height: 25px;
+}
+iframe{
+    width: 98%;
+}
