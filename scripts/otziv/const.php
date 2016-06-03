@@ -1,7 +1,7 @@
 <?php
-const FILENAME = 'db.txt';
-const ANTIMAT  = 'antimat.txt';
-const FILE_REPLACES  = 'replace.txt';
+const FILENAME = '../../data/db.txt';
+const ANTIMAT  = '../../data/antimat.txt';
+const FILE_REPLACES  = '../../data/replace.txt';
 
 function fileToArray( $filename ) {
     if ( !($handle = fopen( $filename, 'r')) )
