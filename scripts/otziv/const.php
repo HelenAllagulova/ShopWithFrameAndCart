@@ -1,5 +1,7 @@
+<meta charset="UTF-8">
 <?php
 const FILENAME = '../../data/db.txt';
+const FILENAMERED = '../../data/db_redact.txt';
 const ANTIMAT  = '../../data/antimat.txt';
 const FILE_REPLACES  = '../../data/replace.txt';
 

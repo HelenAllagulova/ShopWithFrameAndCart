@@ -1,9 +1,10 @@
+<meta charset="UTF-8">
 <?php
 
     include_once 'const.php';
 
 
-    If ( !($rows = fileToArray(FILENAME)) )
+    If ( !($rows = fileToArray(FILENAMERED)) )
         exit(-1);
     //var_dump($rows);
     $count = count($rows);
@@ -14,7 +15,8 @@
         {
             $parts = explode(';', $row);// explode — Разбивает строку $row с помощью разделителя ;
             if ($parts[1] == $_GET['idTovar']) {
-                echo $parts[4] . '<br> Пользователь ' . $parts[2] . ' написал: <br>' . $parts[3] . '<br>'.$parts[5]. '<br>';
+                echo $parts[4] . '<br> Пользователь ' . $parts[2] . ' написал: <br>' . $parts[3] . '<br>'.
+                    (isset($parts[5])?($parts[5]):''). '<br>';
             }
         }
         else

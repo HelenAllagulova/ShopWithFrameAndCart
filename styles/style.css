@@ -32,6 +32,7 @@ main section div {
 }
 
 main section div img {
+    max-height: 150px;
     width: 80%;
 }
 main section {
