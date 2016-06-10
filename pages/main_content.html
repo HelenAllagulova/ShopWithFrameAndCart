@@ -5,10 +5,17 @@
  </title>
      <link href="../styles/style.css" rel="stylesheet">
      <meta charset="utf-8">
+     <script type="text/javascript" src="http://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+     <script>
+         $(function() {
+             $('#showCartBefore').load( "../scripts/cart.php" );
+         })
+     </script>
  </head>
  <body>
-
+ <div id="showCartBefore"></div>
    <main>
+
     <section>
         <div>
            <a href="Cart_Entrance.html" target="_blank">
@@ -124,6 +131,7 @@
                <label>Добавить</label>
                <input type="checkbox" name="vibor[1]" >
                 </div>
+
                 <div>
                <label>Товар: "phone"</label>
                <input type="text" name="name[]" hidden value="phone"><br><br>
@@ -136,6 +144,7 @@
                <label>Добавить</label>
                <input type="checkbox" name="vibor[2]" >
                 </div>
+
                 <div>
                <label>Товар: "tv" </label>
                <input type="text" name="name[]" hidden value="tv"><br><br>
@@ -148,7 +157,7 @@
                <label>Добавить</label>
                <input type="checkbox" name="vibor[3]"><br><br>
                 </div>
-                <input type="submit" value="Добавить все выбранные товары в корзину">
+                <input type="submit" value="Добавить товары в корзину" w>
        </form>
        </section>
    </main>

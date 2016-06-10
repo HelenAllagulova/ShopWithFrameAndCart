@@ -118,37 +118,58 @@ do
     $i++;
 }
 while( $i < count($products) );
-
+$textTable = '';
 
 $name=array();
 $cost=array();
 $action=array();
 $count=array();
 
+//проверяем есть ли кука с именем ip
+if(!isset($_COOKIE['ip_name'])){
+    setcookie('ip_name',$_SERVER['REMOTE_ADDR'],time()+60*60*24*7,'/');
+}
+
+//$_COOKIE['ip_name']=$_SERVER['REMOTE_ADDR']
+//    echo '<pre>';
+//    var_dump($_COOKIE['ip_name']);
+//    echo '</pre>';
+
 
 
 // вызов рекурсивной функции
-$chetchik=ReArray($_REQUEST,count($_REQUEST)-1);
-
+if(isset($_REQUEST['name'])){
+        $chetchik=ReArray($_REQUEST,count($_REQUEST)-1);
 // Сортировка по возрастанию цены
-array_multisort($cost,$name,$action,$count);
-echo '<br> <b> Дополнительно выбрано </b>'.$chetchik.' шт <b>товаров</b>';
+    array_multisort($cost,$name,$action,$count);
+    echo '<br> <b> Дополнительно выбрано </b>'.$chetchik.' шт <b>товаров</b>';
 
 // формируем строку для вывода в таблицу
-for($i=0;$i<$chetchik;$i++) {
-    
+    for($i=0;$i<$chetchik;$i++) {
+
 //        if (!isset($_REQUEST['count'])) {
 //            $_REQUEST['count'] = 1;
 //        }
-    
+
         $_REQUEST['summa'] = $cost[$i] * $count[$i] * (100 - $action[$i]) / 100;
-        $textTable .= BEGIN_ROW . (count($products) + $i+1) . COL_LINE . $name[$i] . COL_LINE . $cost[$i]
+        $textTable .= BEGIN_ROW . (count($products) + $i+1-4) . COL_LINE . $name[$i] . COL_LINE . $cost[$i]
             . COL_LINE . $count[$i] . COL_LINE . $_REQUEST['summa'] . COL_LINE . ' ' . COL_LINE . $action[$i] . END_ROW;
 
         $summa += $_REQUEST['summa'];
 
+    }
+    $textTable .= BEGIN_ROW . ' '. COL_LINE. "Общая сумма заказа " . COL_LINE . ' '. COL_LINE.' '. COL_LINE.$summa . END_ROW;
+    setcookie('old_cart',$textTable,time()+60*60*24*7,'/');
 }
-$textTable .= BEGIN_ROW . ' '. COL_LINE. "Общая сумма заказа " . COL_LINE . ' '. COL_LINE.' '. COL_LINE.$summa . END_ROW;
+elseif (isset($_COOKIE['ip_name']))
+{
+    if (($_COOKIE['ip_name']==$_SERVER['REMOTE_ADDR']))
+    {
+        if(isset($_COOKIE['old_cart'])){
+            $textTable = $_COOKIE['old_cart'];
+        }
+    }
+}
 
 
 $temp = 'textTable';
