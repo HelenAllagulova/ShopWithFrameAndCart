@@ -21,16 +21,16 @@ function is_child($parent)
 }
 
 function show_tovars($cat_key){
-    $query = "SELECT name FROM tovari WHERE categories_key={$cat_key}";
+    $query = "SELECT name FROM tovari WHERE categories_key={$cat_key} ORDER BY show_method";
     $result = mysql_query($query);
     $rows = mysql_num_rows($result);
-    $text='<ul>';
+    $text='<ol>';
 
     for ($j = 0; $j < $rows; $j++)
     {   $row = mysql_fetch_row($result);
         $text.= "<li>{$row[0]}</li>";
     }
-    $text.= "</ul> ";
+    $text.= "</ol> ";
 
     return $text;
 }

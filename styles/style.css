@@ -44,18 +44,23 @@ footer ul li {
     width: 30%;
     display: inline;
 }
+
 nav ul li {
+
     display: inline;
     text-align: left;
-    font-size: 17pt;
+    font-size: 12pt;
     border: 1px solid gray;
     padding: 2px 20px 2px 20px;
-    margin: 2px;
+    margin: 4px;
 }
 
 nav ul li:hover {background: ghostwhite}
 
-nav{text-align: center}
+nav{
+    width: 95%;
+    height: auto;
+    text-align: center}
 
 div:hover img {
     border: lightgrey double 1px;
