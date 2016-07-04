@@ -9,3 +9,4 @@
 #id=35;tov3;Kate;moust beautiful phone;22:13:28;<img src='../../data/images_for_comments/3/35/image0.gif'>
 #id=36;tov4;Leon;tv ;22:14:03;<img src='../../data/images_for_comments/4/36/image0.gif'>
 #id=37;tov1;Liza;nace for my child;22:19:55;<img src='../../data/images_for_comments/1/37/image0.jpg'>
+#id=38;tov3; Anatoliy;cooolll phone;09:00:32;
