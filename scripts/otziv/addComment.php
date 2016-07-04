@@ -85,7 +85,7 @@ if (isset($_REQUEST['idTovar']))
 
 }
 
-//include_once 'showComment.php';
+include_once 'showComment.php';
 
 /* Запись комментари в файл
   $antimat = ReadAntimat(ANTIMAT);
