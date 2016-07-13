@@ -1,5 +1,5 @@
-#id=26;tov1;Alena;first;13:39:48;<img src='../../data/images_for_comments/1/26/image0.jpg'>
-#id=27;tov1;Mila;sevond Name;13:40:21;<img src='../../data/images_for_comments/1/27/image0.jpg'><img src='../../data/images_for_comments/1/27/image1.jpg'>
+#id=26;tov1;Alena;first;13:39:48
+#id=27;tov1;Mila;sevond;13:40:21;<img src='../../data/images_for_comments/1/27/image1.jpg'>
 #id=28;tov2;Antuan;third;13:41:03;<img src='../../data/images_for_comments/2/28/image1.gif'><img src='../../data/images_for_comments/2/28/image2.jpg'><img src='../../data/images_for_comments/2/28/image3.jpg'>
 #id=29;tov4;Gelard;fourth;13:41:33
 #id=30;tov3;Anna;five;13:59:20
@@ -7,5 +7,6 @@
 #id=33;tov1;Anna;nice car;22:10:03
 #id=34;tov2;Pasha;so smart watch! ;22:12:28
 #id=35;tov3;Kate;moust beautiful phone;22:13:28
-#id=36;tov4;Leon;tv ;22:14:03;<img src='../../data/images_for_comments/4/36/image0.gif'>
+#id=36;tov4;Leon;tv ;22:14:03
 #id=37;tov1;Liza;nace for my child;22:19:55
+#id=38;tov3; Anatoliy;cooolll phone;09:00:32

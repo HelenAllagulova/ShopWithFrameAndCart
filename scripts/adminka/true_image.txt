@@ -1,7 +1,4 @@
-<img src='../../data/images_for_comments/1/26/image0.jpg'>
-<img src='../../data/images_for_comments/1/27/image0.jpg'>
 <img src='../../data/images_for_comments/1/27/image1.jpg'>
 <img src='../../data/images_for_comments/2/28/image1.gif'>
 <img src='../../data/images_for_comments/2/28/image2.jpg'>
 <img src='../../data/images_for_comments/2/28/image3.jpg'>
-<img src='../../data/images_for_comments/4/36/image0.gif'>
